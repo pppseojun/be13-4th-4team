@@ -9,7 +9,7 @@ pipeline {
             spec:
               containers:
               - name: gradle
-                image: gradle:8.6-jdk21-alpine
+                image: gradle:8.6-jdk21
                 command:
                 - cat
                 tty: true
