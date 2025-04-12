@@ -59,7 +59,6 @@ pipeline {
                 sh 'cd be-4th-4team-backend && ./gradlew clean'
                 sh 'cd be-4th-4team-backend && ./gradlew clean build -x test'
                 sh 'ls -al'
-                sh 'ls -al ./build/libs'
             }
         }
     }
