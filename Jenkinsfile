@@ -55,8 +55,8 @@ pipeline {
                 sh 'pwd'
                 sh 'ls -al'
                 sh 'gradle -v'
-                sh './gradlew clean'
-                sh './gradlew build'
+                sh 'be-4th-4team-backend/gradlew clean'
+                sh 'be-4th-4team-backend/gradlew build'
                 sh 'ls -al'
                 sh 'ls -al ./build/libs'
             }
