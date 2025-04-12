@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: project4-ingress
+  labels:
+    name: project4-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: selfsigned-cluster-issuer
+spec:
+  ingressClassName: nginx
+  tls:
+  - secretName: project4-tls-secret
+    hosts: 
+    - beyond.project4-api.com
+  rules:
+  - host: beyond.project4-api.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: project4-api-service
+            port: 
+              number: 8088
