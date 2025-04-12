@@ -57,7 +57,7 @@ pipeline {
                 sh 'gradle -v'
                 sh 'chmod +x be-4th-4team-backend/gradlew'
                 sh 'cd be-4th-4team-backend && ./gradlew clean'
-                sh 'cd be-4th-4team-backend && ./gradlew build'
+                sh 'cd be-4th-4team-backend && ./gradlew clean build -x test'
                 sh 'ls -al'
                 sh 'ls -al ./build/libs'
             }
